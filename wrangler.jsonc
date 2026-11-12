@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "omnipost-api",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-01-01",
+  "observability": { "enabled": true },
+  "vars": {
+    "APP_ENV": "development",
+    "AI_MODEL": "glm-4-flash"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "omnipost-db",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "db/migrations"
+    }
+  ]
+}
